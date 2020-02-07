@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function pulaLinha() {
+            document.write("<br/><hr/><br/>");
+        }
+        function mostra(frase) {
+            document.write("<big>" + frase + "</big>");
+            pulaLinha();
+        }
+        function sorteia(n) {
+            return Math.round(Math.random() * n);
+        }   
+
+        var numeroPensado = sorteia(10);
+        var i = 1;
+
+        while(i <= 3) {
+            var chute = parseInt(prompt("Digite seu chute:"));
+            if (chute == numeroPensado) {
+                alert("Você acertou!");
+                break;
+            } else {
+                alert("Você errou!");
+            }
+            i++;
+            console.log(numeroPensado);
+        }
+
+    </script>
+</body>
+</html>

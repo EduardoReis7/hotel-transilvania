@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br/><hr/><br/>");
+        }
+        function mostra(frase) {
+            document.write("<big>" + frase + "</big>");
+            pulaLinha();
+        }
+
+        function calculaIMC(peso, altura){
+
+            var imc = peso / Math.pow(altura, 2);
+            mostra("IMC: " + Math.round(imc));
+
+            if (imc < 18.5) {
+                mostra("Abaixo do peso.");
+            } else if (imc >= 18.5 && imc < 25) {
+                mostra("Peso ideal");
+            } else if (imc >= 25 && imc < 30) {
+                mostra("Sobrepeso");
+            } else if (imc >= 30 && imc < 35) {
+                mostra("Obesidade (Grau I)");
+            } else if (imc >= 35 && imc < 40) {
+                mostra("Obesidade Severa (Grau II)");
+            } else if (imc >= 40){
+                mostra("Obesidade Mórbida (Grau III)");
+            } else { 
+                mostra("Valor inválido.");
+            }
+            return imc;
+        }
+        
+        var nome = prompt("Digite seu nome: ");
+        var pesoInformado = prompt(nome + ", informe o peso: ");
+        var alturaInformada = prompt(nome + ", informe a altura: ");
+        var testaIMC = calculaIMC(pesoInformado, alturaInformada);
+
+        </script>
+</body>
+</html>

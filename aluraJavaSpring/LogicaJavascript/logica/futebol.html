@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br/><hr/><br/>");
+        }
+        function mostra(frase) {
+            document.write("<big>" + frase + "</big>");
+            pulaLinha();
+        }
+
+        var vitorias = parseInt(prompt("Entre com o número de vitórias: "));
+        var empates = parseInt(prompt("Entre com o número de empates: "));
+        var pontos = vitorias * 3 + empates;
+        var pontosTemporadaPassada = 28;
+
+        mostra("A pontuação total foi: " + pontos);
+
+        if (pontos < pontosTemporadaPassada) {
+            mostra("Seu time teve uma pontuação menor que da temporada passada.");
+        } else if (pontos == pontosTemporadaPassada) {
+            mostra("Seu time teve uma pontuação igual aos da temporada passada.");
+        } else if (pontos > pontosTemporadaPassada) {
+            mostra("Seu time teve uma pontuação maior que da temporada passada.");
+        } else {
+            mostra("Valor inválido.");
+        }
+        
+    </script>
+</body>
+</html>

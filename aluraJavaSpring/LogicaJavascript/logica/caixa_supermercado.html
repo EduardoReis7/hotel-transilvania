@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var totalDia = 0;
+        var temPessoas = true;
+
+        function abreCaixa() {
+            var temItens = true;
+            var totalCompra = 0;
+            while (temItens) {
+                var nomeProduto = prompt("Produto: ");
+                var precoProduto = parseFloat(prompt("Preço: "));
+                document.write("<br/>" + nomeProduto);
+                document.write("<br/>" + precoProduto);
+                totalCompra += precoProduto;
+                prompt("Tem mais itens? ") == "sim" ? temItens = true : temItens = false;
+            }
+            totalDia += totalCompra;
+            document.write("<br/> Total à pagar: " + totalCompra);
+        }
+        
+        while (temPessoas) {
+            abreCaixa();
+            prompt("Ainda há pessoas na fila? ") == "sim" ? temPessoas = true : temPessoas = false;
+        }
+        document.write("<br/>O total do dia foi: " + totalDia);
+
+    </script>
+</body>
+</html> 

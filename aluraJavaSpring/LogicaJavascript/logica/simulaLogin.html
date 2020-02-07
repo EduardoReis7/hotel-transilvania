@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br/><hr/><br/>");
+        }
+        function mostra(frase) {
+            document.write("<big>" + frase + "</big>");
+            pulaLinha();
+        }
+
+        var loginCadastrado = "alura";
+        var senhaCadastrada = "alura321";
+
+        var loginInformado = prompt("Informe seu login");
+        var senhaInformada = prompt("Informe sua senha");
+        
+        var i = 0;
+        
+        if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+            alert("Bem-vindo ao sistema " + loginInformado);
+        } else {
+            while(i <= 1) {
+                alert("Login inválido. Tente novamente");
+                loginInformado = prompt("Informe seu login");
+                senhaInformada = prompt("Informe sua senha");
+                i++;
+            }
+            alert("Senha bloqueada.");
+        }
+    </script>
+</body>
+</html>
